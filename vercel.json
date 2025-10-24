@@ -1,11 +1,12 @@
 {
   "version": 2,
+  "outputDirectory": "restaurant-dashboard/dist",
   "builds": [
     {
-      "src": "restaurant-dashboard/vite.config.js",
+      "src": "restaurant-dashboard/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "restaurant-dashboard/dist"
+        "distDir": "dist"
       }
     }
   ]
