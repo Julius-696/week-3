@@ -1,13 +1,12 @@
 {
-  "version": 2,
-  "outputDirectory": "restaurant-dashboard/dist",
   "builds": [
     {
       "src": "restaurant-dashboard/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "config": { "distDir": "restaurant-dashboard/dist" }
     }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "restaurant-dashboard/dist/$1" }
   ]
 }
